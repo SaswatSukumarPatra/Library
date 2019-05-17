@@ -1,0 +1,12 @@
+<% if @subjects.blank? %>
+<p>No Subjects saved till now? Weird. Call the Repo owner</p>
+<% else %>
+<p>Subjects Available</p>
+<!-- Unordered list of subjects -->
+<ul id = "subjects">
+    <% @subjects.each do |c| %>
+    <!-- Need to show all books under a subject -->
+    <%= c.name %><br />
+    <% end %>
+</ul>
+<% end %>
